@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 import logger from './utils/logger.utils.js';
+import { swaggerUi, swaggerSpec } from './utils/swagger.utils.js';
 
 const app = express();
 const morganFormat = ":method :url :status :response-time ms";
@@ -21,5 +22,16 @@ app.use(
       },
     })
   );
+
+// Middleware to Swagger UI
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+
+// import routes
+import healthCheckRoutes from './routes/healthCheck.routes.js';
+
+
+// Use routes
+app.use('/api/v1/healthcheck', healthCheckRoutes);
 
 export default app;
