@@ -2,9 +2,13 @@ import express from 'express';
 import morgan from 'morgan';
 import logger from './utils/logger.utils.js';
 import { swaggerUi, swaggerSpec } from './utils/swagger.utils.js';
+import { errorHandler } from './middlewares/errorHandler.middlewares.js';
+
 
 const app = express();
+
 const morganFormat = ":method :url :status :response-time ms";
+
 
 // Middleware to log requests
 app.use(
@@ -23,6 +27,7 @@ app.use(
     })
   );
 
+
 // Middleware to Swagger UI
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
@@ -33,5 +38,9 @@ import healthCheckRoutes from './routes/healthCheck.routes.js';
 
 // Use routes
 app.use('/api/v1/healthcheck', healthCheckRoutes);
+
+
+// Default Global error handler
+app.use(errorHandler)
 
 export default app;
