@@ -1,4 +1,4 @@
-# ⚔️ YourCodeArena – Your Personal Coding Battleground
+# ⚔️ YourCodeArena – Your Personal Coding Battleground For Developers
 
 YourCodeArena is a full-stack LeetCode clone built to help developers practice coding, solve algorithmic problems, and get real-time feedback using Judge0. Whether you're preparing for coding interviews or brushing up on DSA skills, this platform is **your own coding arena**.
 
