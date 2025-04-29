@@ -4,10 +4,11 @@ import logger from './utils/logger.utils.js';
 import { swaggerUi, swaggerSpec } from './utils/swagger.utils.js';
 import { errorHandler } from './middlewares/errorHandler.middlewares.js';
 
-
 const app = express();
 
 const morganFormat = ":method :url :status :response-time ms";
+
+
 
 
 // Middleware to log requests

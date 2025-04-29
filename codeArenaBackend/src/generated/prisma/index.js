@@ -176,7 +176,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/vishalrathore8oct/Pictures/yourcodearena/codeArenaBackend/src/generated/prisma",
+      "value": "/home/vishal/Documents/personal projects/yourcodearena/codeArenaBackend/src/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -190,7 +190,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/vishalrathore8oct/Pictures/yourcodearena/codeArenaBackend/prisma/schema.prisma",
+    "sourceFilePath": "/home/vishal/Documents/personal projects/yourcodearena/codeArenaBackend/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -204,11 +204,12 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://neondb_owner:npg_WCM4OF2eKqYR@ep-sparkling-grass-a1knfuzl-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+        "value": null
       }
     }
   },
